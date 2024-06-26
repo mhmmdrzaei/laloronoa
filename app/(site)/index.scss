@@ -1,0 +1,52 @@
+
+
+
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: calc($sizeValue/10) * 1rem;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    background: #FFFFFF;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+body {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+    margin: 0;
+}
+.flex {
+    display: flex;
+    flex-flow:wrap;
+    justify-content: space-between;
+}
+
+//Audio
+.audiobutton {
+    background: transparent;
+    border: none;
+}
+.play {
+    background: url(sources/mic-Black.svg);
+    width: 45px;
+    height: 34px;
+}
+.paused {
+    background: url(sources//mic-off.svg);
+    width: 35px;
+    height: 40px;
+}
+ 
+@media(max-width: 500px){
+
+}
+
+
