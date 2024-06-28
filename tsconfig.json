@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(site)/components/audioComponent/audioComponent.component.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(site)/components/audioComponent/audioComponent.component.jsx", "app/(site)/components/projectImages/projectImages.compoent.jsx"],
   "exclude": ["node_modules"]
 }

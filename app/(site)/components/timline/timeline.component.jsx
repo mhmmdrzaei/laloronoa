@@ -13,6 +13,7 @@ const TimeLine = ({ projects }) => {
     }
     setIsOpen(!isOpen);
   };
+  
 
   return (
     <div className="timeline">
@@ -23,8 +24,8 @@ const TimeLine = ({ projects }) => {
         {projects
           .sort((a, b) => new Date(b.date) - new Date(a.date))
           .map((project) => (
-            <li key={project._id}>
-              <Link href={`#${project.slug}`}>{project.title}</Link>
+            <li key={project._id} onClick={toggleMenu}>
+              <Link href={`#${project.slug}` }>{project.title}</Link>
             </li>
           ))}
       </ul>

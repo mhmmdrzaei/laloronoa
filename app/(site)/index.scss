@@ -44,6 +44,24 @@ figure {
     width: 35px;
     height: 40px;
 }
+
+.navigation {
+    .beforeLink::after {
+        content:" ";
+        background: url(./sources/arrow.svg);
+        display: block;
+        width: 26px;
+        height: 14px;
+    }
+    .afterLink::before {
+        content:" ";
+        background: url(./sources/arrow.svg);
+        display: block;
+        width: 26px;
+        height: 14px;
+        transform: rotate(180deg);
+    }
+}
  
 @media(max-width: 500px){
 
