@@ -26,8 +26,7 @@ export default function ProjectImages({ images }) {
 
           case 'projectImage':
             return (
-              <div className="projectImg" key={uuidv4()}>
-                <figure className={`${items.classImg} image`} >
+                <figure className={`${items.classImg} image`}  key={uuidv4()}>
                   <Image
                     src={items.url}
                     width={1200}
@@ -37,7 +36,6 @@ export default function ProjectImages({ images }) {
                     quality={60}
                   />
                 </figure>
-              </div>
             );
 
           case 'embedVid':

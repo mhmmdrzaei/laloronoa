@@ -22,7 +22,7 @@ export default function Header({ set, projects }: HeaderProps) {
           <h1 className="siteTitle">
             <Link href={"/"}>{setting.title}</Link>
           </h1>
-          <h1>
+          <h1 className="aboutLink">
             <Link href={"/about"}>About</Link>
           </h1>
           <AudioPlayer audio={setting.audio_comp} />

@@ -1,5 +1,5 @@
-"use client"
-import { useState, useRef, useEffect } from 'react';
+"use client";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 const TimeLine = ({ projects }) => {
@@ -13,22 +13,19 @@ const TimeLine = ({ projects }) => {
     }
     setIsOpen(!isOpen);
   };
-  
 
   return (
     <div className="timeline">
-         <button onClick={toggleMenu}>
-        {isOpen ? 'Close' : 'Timeline'}
-      </button>
-              <ul className={`menu ${isOpen ? 'openMenu' : ''}`}>
+      <ul className={`menu ${isOpen ? "openMenu" : ""}`}>
         {projects
           .sort((a, b) => new Date(b.date) - new Date(a.date))
           .map((project) => (
             <li key={project._id} onClick={toggleMenu}>
-              <Link href={`#${project.slug}` }>{project.title}</Link>
+              <Link href={`#${project.slug}`}>{project.title}</Link>
             </li>
           ))}
       </ul>
+      <button onClick={toggleMenu}>{isOpen ? "Close" : "Timeline"}</button>
     </div>
   );
 };

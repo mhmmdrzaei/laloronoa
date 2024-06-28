@@ -1,7 +1,7 @@
 import { getsettings, getInformation, getProjects } from '@/sanity/sanity.utils'
 import Header from '../components/header/header.component';
 import InfoContent from '../components/infoContent/infoContent.component';
-
+import Background from "../components/background/background.component";
 import type { Metadata } from 'next'
 export const dynamic = 'force-dynamic'
  
@@ -39,14 +39,24 @@ export default async function Information() {
   const projects = await getProjects();
 
     return (
+      <>
+    
+
+      <main className="about">
+      <Header set={settings} projects={projects}/>
+      <Background>
+     <InfoContent info={info} />
+
+     </Background>
+      </main>
       
-     
-      <main className='officePage'>
-        <Header set={settings} projects={projects}/>
-        <InfoContent info={info} />
+
+       
+
 
         
-      </main>
+      </>
+
     )
   }
   
