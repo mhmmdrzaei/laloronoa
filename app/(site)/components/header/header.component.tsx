@@ -1,6 +1,5 @@
 "use client";
 import { Settings } from "@/sanity/types/Settings";
-import Image from "next/image";
 import { SingleProject } from "@/sanity/types/Project";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";

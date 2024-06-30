@@ -33,5 +33,6 @@ export type SingleProject = {
   classname: string;
   projectdescription: PortableTextBlock[];
   projectImages: ProjectAssets[];
+  bgColour: string;
 
 };

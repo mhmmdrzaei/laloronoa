@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import ProjectsAfterToday from './components/projectsAfterToday/projectsAfterToday.component'
 import ProjectsBeforeToday from './components/projectsBeforeToday/projectsBeforeToday.component'
 import Landing from './components/landing/landing.component'
+import ScrollTriggerComponent from './components/scrollComponent/scrollcomponent.component'
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getsettings();
@@ -35,6 +36,7 @@ export default async function Home() {
   return (
     <main>
       <Header set={settings} projects={projects}/>
+      <ScrollTriggerComponent/>
       <section className="landing">
       <ProjectsAfterToday projects={projects}/>
 

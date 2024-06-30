@@ -40,7 +40,7 @@ export default function InfoContent({ info }: HeaderProps) {
     <>
       {info.map((infoPage) => (
         <section className="pageMain aboutPage" key={infoPage._id}>
-          <div className="aboutPage">
+          <div className="aboutPageText">
           <PortableText value={infoPage.information} components={components as any} />
           <div className="contactInnerContainer">
                 {infoPage.socialInfo.map((social)=> {

@@ -18,7 +18,7 @@ const Project = ({ project }) => {
     },
   };
   return (
-    <div key={project._id} className={`singleProject ${project.classname}`} id={`${project.slug}`}>
+    <div key={project._id} className={`singleProject  section ${project.classname}`} id={`${project.slug}`} data-bgcolor={`${project.bgColour? project.bgColour: '#ffffff'}`}>
       <h1 className="projectTitle">{project.title}</h1>
       <Background>
         <div className="projectContent">

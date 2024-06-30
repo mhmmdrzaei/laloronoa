@@ -34,6 +34,7 @@ export async function getsettings(): Promise<Settings[]> {
         title,
         "slug": slug.current,
         classname,
+        bgColour,
         date,
           projectdescription,
         "projectImages": projectImages[]{

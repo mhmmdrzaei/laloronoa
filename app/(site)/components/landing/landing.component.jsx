@@ -25,7 +25,7 @@ const Landing = ({ settings }) => {
   };
 
   return (
-    <section className="landingPage">
+    <section className="landingPage section" data-bgcolor='#ffffff'>
       <h1 className="pageTitle">{formattedDate}</h1>
       <Background>
 

@@ -25,6 +25,10 @@ export default {
         type: 'string'
       },
       {
+        name:'bgColour',
+        type: 'string'
+      },
+      {
         title: 'Date',
         name: 'date',
         type: 'datetime'
