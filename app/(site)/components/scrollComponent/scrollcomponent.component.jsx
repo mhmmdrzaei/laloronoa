@@ -77,10 +77,10 @@ const ScrollTriggerComponent = () => {
           scrub: true // Smooth scrubbing
         }
       });
-        // const home = document.getElementById('home');
-        // if (home) {
-        //   home.scrollIntoView({ behavior: 'smooth' });
-        // } 
+        const home = document.getElementById('home');
+        if (home) {
+          home.scrollIntoView({ behavior: 'smooth' });
+        } 
 
         const screenWidth = window.innerWidth;
     const scrollOffset = screenWidth > 700 ? 1.3 : 1.7;
