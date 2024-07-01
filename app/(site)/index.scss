@@ -133,7 +133,7 @@ header {
       z-index: -1;
       width: 2px;
       position: absolute;
-      height: calc(100vh - 90px);
+      height: calc(100dvh - 90px);
       background: black;
       left: 50%;
     }
@@ -250,11 +250,11 @@ header {
 .landingPage {
   min-height: 100vh;
   .layout1 {
-    background: url(./sources/landing/layer1.svg);
+    background: url(./sources/landing/layer1.png);
     top: 14%;
   }
   .layout2 {
-    background: url(./sources/landing/layer2.svg);
+    background: url(./sources/landing/layer2.png);
     left: 50%;
     top: -18%;
   }
@@ -320,16 +320,16 @@ header {
     color: white;
   }
   .layout1 {
-    background: url(./sources/2066/layer1.svg);
-    filter: invert(1);
+    background: url(./sources/2066/layer2.png);
+    // filter: invert(1);
     left: 40%;
-    top: 3%;
+    // top: 3%;
     width: 80%;
   }
   .layout2 {
-    background: url(./sources/2066/layer2.svg);
-    left: -20%;
-    top: -80%;
+    background: url(./sources/2066/layer1.png);
+    left: 0%;
+    // top: -80%;
   }
   .projectContent {
     position: relative;
@@ -369,7 +369,7 @@ header {
     width: 50%;
   }
   .layout2 {
-    background: url(./sources/2022-1/layer2.svg);
+    background: url(./sources/2022-1/layer2.png);
     position: fixed;
     width: 60%;
     left: 40%;
@@ -388,20 +388,20 @@ header {
       z-index: 4;
     }
     .first-image {
-      width: 80%;
+      width: 100%;
       position: absolute;
-      right: 0;
+      left: calc(100% - 750px);
       top: 0;
     }
     .second-image {
       position: absolute;
       width: 50%;
       left: 25%;
-      max-width: 500px;
+      max-width: 650px;
       top: 100vh;
     }
     .third-image {
-      width: 25%;
+      width: 30%;
       position: absolute;
       right: 20px;
       top: 135vh;
@@ -419,13 +419,15 @@ header {
   // background-color: #faff13;
 
   .layout1 {
-    background: url(./sources/2022-2/layer1.svg);
-    width: 85%;
-    left: 10%;
+    background: url(./sources/2022-2/layer1.png);
+    width:100%;
+    left: 0%;
+    top: 5%;
   }
   .layout2 {
-    background: url(./sources/2022-2/layer2.svg);
+    background: url(./sources/2022-2/layer2.png);
     opacity: 0.8;
+    left: 0%;
   }
   .projectContent {
     min-height: 150vh;
@@ -486,14 +488,14 @@ header {
     }
   }
   .layout1 {
-    background: url(./sources/1519/layer1.svg);
+    background: url(./sources/1519/layer1.png);
     width: 60%;
     left: 40%;
   }
   .layout2 {
-    background: url(./sources/1519/layer2.svg);
+    background: url(./sources/1519/layer2.png);
     width: 80%;
-    left: 20%;
+    left: 0%;
   }
 }
 .about {
@@ -522,13 +524,15 @@ header {
     }
   }
   .layout1 {
-    background: url(./sources/about/layer1.svg);
+    background: url(./sources/about/layer1.png);
     background-size: cover !important;
     height: 100vh;
   }
   .layout2 {
-    background: url(./sources/about/layer2.svg);
-    height: 100vh
+    background: url(./sources/about/layer2.png);
+    height: 100vh;
+    left:5%;
+    top: -3%;
   }
   .aboutPage {
     @extend .flex;
@@ -552,8 +556,9 @@ header {
       }
     }
     .aboutImg {
-      width: 40%;
-      max-width: 300px;
+      width: 30%;
+      max-width: 430px;
+      margin: 0 auto;
     }
   }
 }
@@ -696,6 +701,9 @@ header {
       .fourth-image {
         left: 32%;
         width: 70%;
+        top: -10px;
+        position: relative;
+        order: 5;
       }
     }
   }

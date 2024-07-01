@@ -26,8 +26,8 @@ export default function ProjectImages({ images }) {
               <figure className={`${items.classImg} image`} key={uuidv4()}>
                 <Image
                   src={items.url}
-                  width={1200}
-                  height={1200}
+                  width={700}
+                  height={700}
                   alt={
                     items.attribution
                       ? items.attribution

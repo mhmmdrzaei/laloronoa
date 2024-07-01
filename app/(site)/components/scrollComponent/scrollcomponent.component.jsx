@@ -80,6 +80,8 @@ const ScrollTriggerComponent = () => {
         const home = document.getElementById('home');
         if (home) {
           home.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo(0, 1.3 * window.innerHeight);
         }
       
 
