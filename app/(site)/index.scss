@@ -130,6 +130,7 @@ header {
       left: 50%;
     }
     button {
+      color: black;
       position: fixed;
       bottom: 20px;
       width: 120px;
@@ -649,6 +650,9 @@ header {
     }
   }
   .s2022-1 {
+    .layout1, .layout2 {
+      position: absolute;
+    }
     .projectContent {
       display: flex;
       flex-wrap: wrap;
@@ -687,7 +691,7 @@ header {
   }
   .s2022-2 {
     .projectContent {
-      // min-height: 100vh;
+      min-height: 100vh;
       .projectText {
         width: 80%;
         margin: 10vh auto 20vh;

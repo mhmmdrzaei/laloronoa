@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: `${settings[0].title}`,
       description: settings[0].seoDescription,
-      url: 'https://iknow-youknow.com',
+      url: 'https://laloronoa.vercel.app/',
       siteName: `${settings[0].title}`,
       images: [
         {

@@ -20,7 +20,7 @@ const AudioPlayer = ({ audio }) => {
     <div className='audioComp'>
       {audio && (
         <>
-          <audio ref={audioRef} src={audio}/>
+          <audio preload="none" ref={audioRef} src={audio}/>
           <button className={`${isPlaying? 'play': 'paused'} audiobutton`} onClick={togglePlayPause} alt="Play/Pause">
           </button>
         </>
