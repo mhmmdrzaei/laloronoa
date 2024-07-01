@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import Background from "../background/background.component";
+import Nav from '../nav/nav.component'
 const Landing = ({ settings }) => {
   const today = new Date();
   const formattedDate = today.toLocaleDateString("en-US", {
@@ -25,36 +26,33 @@ const Landing = ({ settings }) => {
   };
 
   return (
-    <section className="landingPage section" data-bgcolor='#ffffff'>
+    <section className="landingPage section" data-bgcolor="#ffffff">
       <h1 className="pageTitle">{formattedDate}</h1>
       <Background>
-
-        {settings.map((c) => (
-          <div className="landingPageInner">
-            <div className="navigation">
-              <Link href={"#afterCurrent"} className="afterLink"></Link>
-              <p>OPEN TIMELINE TO SCROLL THROUGH THE PROJECT</p>
-              <Link href={"#beforeCurrent"} className="beforeLink"></Link>
-            </div>
-            <figure className="landingImg">
-              <Image
-                src={c.herovisual.heroImgUrl}
-                width={1200}
-                height={1200}
-                alt={
-                  c.herovisual.attribution
-                    ? c.herovisual.attribution
-                    : "A Project by Sofi Gudiño"
-                }
-                loading="lazy"
-                quality={60}
-              />
-            </figure>
-            <div className="landingText">
-              <PortableText value={c.intro_text} components={components} />
-            </div>
-          </div>
-        ))}
+        <div className="landingPageInner">
+          <Nav />
+          {settings.map((c) => (
+            <>
+              <figure className="landingImg">
+                <Image
+                  src={c.herovisual.heroImgUrl}
+                  width={1200}
+                  height={1200}
+                  alt={
+                    c.herovisual.attribution
+                      ? c.herovisual.attribution
+                      : "A Project by Sofi Gudiño"
+                  }
+                  loading="lazy"
+                  quality={60}
+                />
+              </figure>
+              <div className="landingText">
+                <PortableText value={c.intro_text} components={components} />
+              </div>
+            </>
+          ))}
+        </div>
       </Background>
     </section>
   );

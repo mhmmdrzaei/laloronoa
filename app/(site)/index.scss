@@ -15,7 +15,7 @@ body {
 // main {
 //   overflow: hidden;
 // }
-body::after {
+body::after  {
   content: " ";
   height: calc(100vh - 70px);
   top: 20px;
@@ -89,7 +89,7 @@ header {
       li {
         width: 100%;
         margin: 0 auto;
-        a {
+        span {
           background: black;
           color: white;
           @include fontSize(8);
@@ -98,6 +98,7 @@ header {
           display: flex;
           margin: 0 auto;
           width: fit-content;
+          cursor: pointer;
         }
       }
     }
@@ -162,30 +163,37 @@ header {
 .play {
   background: url(sources/mic-Black.svg);
   width: 45px;
-  height: 34px;
+  height: 37px;
 }
 .paused {
   background: url(sources//mic-off.svg);
-  width: 35px;
-  height: 40px;
+  width: 36px;
+  height: 38px;
 }
 
 .navigation {
-  .beforeLink::after {
+  @extend .flex;
+  justify-content: center;
+  .beforeLink {
     content: " ";
     background: url(./sources/arrow.svg);
     display: block;
     width: 26px;
     height: 14px;
+    cursor: pointer;
+    
   }
-  .afterLink::before {
+  .afterLink {
     content: " ";
     background: url(./sources/arrow.svg);
     display: block;
     width: 26px;
     height: 14px;
     transform: rotate(180deg);
+    cursor: pointer;
   }
+
+
 }
 .singleProject,
 .about,
@@ -259,7 +267,7 @@ header {
       border: 1px solid black;
       padding: 20px;
       position: absolute;
-      bottom: 100px;
+      bottom: 20%;
       left: 30%;
     }
     .navigation {
@@ -327,7 +335,7 @@ header {
       width: 50%;
       max-width: 400px;
       position: absolute;
-      bottom: 100px;
+      bottom: 20%;
       right: 0;
       z-index: 3;
     }
@@ -499,6 +507,19 @@ header {
 }
 .about {
   background: black;
+  .container {
+    padding: 0 5%;
+  }
+  .container::after {
+    background: #ffffff;
+    content: " ";
+    height: calc(100vh - 70px);
+    top: 20px;
+    left: 50%;
+    width: 2px;
+    position: fixed;
+    z-index: -1;
+  }
   header {
     h1 a, button {
       color: #ffffff;
@@ -510,18 +531,21 @@ header {
   .layout1 {
     background: url(./sources/about/layer1.svg);
     background-size: cover !important;
-    height: 130vh;
+    height: 100vh;
   }
   .layout2 {
     background: url(./sources/about/layer2.svg);
   }
   .aboutPage {
-    position: relative;
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 100vh;
+
     .aboutPageText {
-      position: absolute;
       width: 40%;
+      height: fit-content;
       background: #faff13;
       border: 1px solid black;
       padding: 20px;
@@ -533,13 +557,193 @@ header {
       }
     }
     .aboutImg {
-      position: absolute;
-      left: 65%;
       width: 40%;
       max-width: 300px;
     }
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 875px) {
+  .s2666 {
+    .projectContent {
+      .second-image {
+        left: 10%;
+      }
+    }
+  }
+  .landingPage .landingPageInner .landingText {
+    width: 50%;
+    left: 47%;
+  }
+  .s2022-1 .projectContent .projectText {
+    width: 60%;
+  }
+  .s1519 .projectContent .projectText {
+    width: 70%;
+    left: 15%;
+  }
+}
+@media (max-width: 700px) {
+  h1,header .timeline button  {
+    @include fontSize(10);
+  }
+
+ header {
+  .paused,  .play {
+    scale: .6;
+  }
+
+ }
+.audiobutton {
+  bottom:12px;
+  right: 6px;
+}
+  .singleProject,
+.about,
+.landingPage {
+  .container {
+    padding: 7vh 5% 20vh;
+  }
+}
+  .s2666 {
+    .projectContent{
+      display: flex;
+      flex-wrap: wrap;
+      .projectText {
+        width: 100%;
+        position: initial;
+        margin: 30px 0;
+        order: 2;
+      }
+      .first-image {
+        width: 100%;
+        position: initial;
+        order: 1;
+      }
+      .second-image {
+        width: 100%;
+        position: initial;
+        order: 3;
+      }
+    }
+  }
+  .landingPage {
+   .landingPageInner{
+    display: flex;
+    flex-wrap: wrap;
+    .landingText {
+      width: 100%;
+      position: initial;
+      margin: 30px 0;
+      order: 3;
+     }
+     .landingImg {
+      width: 100%;
+      position: initial;
+      order: 1;
+     }
+     .navigation {
+      position: inherit;
+      order: 2;
+      margin-top: 30px;
+     }
+
+   }
+   
+  }
+  .s2022-1 {
+    .projectContent{
+      display: flex;
+      flex-wrap: wrap;
+      height: initial;
+      .projectText {
+        width: 100%;
+        position: initial;
+        margin: 30px 0;
+        height: fit-content;
+        order: 2;
+      }
+      .first-image {
+        width: 100%;
+        position: initial;
+
+        order: 1;
+      }
+      .second-image {
+        width: 100%;
+        order: 3;
+        position: relative;
+        left: -2%;
+        width: 80%;
+        top: 23px;
+      }
+      .third-image {
+        width: 100%;
+        position: initial;
+        order: 4;
+      }
+      .fourth-image {
+        left: 32%;
+        width: 70%;
+      }
+    }
+  }
+  .s2022-2 {
+    .projectContent {
+      // min-height: 100vh;
+      .projectText {
+        width: 80%;
+        margin: 10vh auto 20vh;
+      }
+    }
+  }
+  .s1519 {
+    .projectContent{
+      display: flex;
+      flex-wrap: wrap;
+      height: initial;
+      .projectText {
+        width: 100%;
+        position: initial;
+        margin: 30px 0;
+        height: fit-content;
+        order: 2;
+      }
+      .first-image {
+        width: 80%;
+        position: sticky;
+
+        order: 1;
+      }
+      .second-image {
+        width: 50%;
+        order: 3;
+        position: relative;
+        left: -2%;
+        top: 23px;
+      }
+      .third-image {
+        width: 50%;
+        position: relative;
+        order: 4;
+        top: -11vh;
+        left: 5%;
+      }
+
+    }
+  }
+  .about .aboutPage {
+    .aboutPageText {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+    .aboutImg {
+      width: 70%;
+      margin: 0 auto;
+      position: relative;
+      top: -5vh;
+      z-index: 0;
+    }
+  }
 }
