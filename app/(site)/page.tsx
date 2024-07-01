@@ -41,11 +41,6 @@ export default async function Home() {
       <ProjectsAfterToday projects={projects}/>
       <Landing settings={settings}/>
       <ProjectsBeforeToday projects={projects}/>
-      {/* <HomeComp projects={projects} settings={settings}/> */}
-      {/* 
-
-      <Landing settings={settings}/>
-       */}
       
     </main>
   );
