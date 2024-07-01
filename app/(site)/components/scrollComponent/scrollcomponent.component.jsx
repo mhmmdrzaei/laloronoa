@@ -77,9 +77,11 @@ const ScrollTriggerComponent = () => {
           scrub: true // Smooth scrubbing
         }
       });
-      const home = document.getElementById('home');
-      home.scrollIntoView({ behavior: "smooth" });
-      // window.scrollTo(home); 
+        const home = document.getElementById('home');
+        if (home) {
+          home.scrollIntoView({ behavior: 'smooth' });
+        }
+      
 
         gsap.to({}, {
       scrollTrigger: {
@@ -100,7 +102,9 @@ const ScrollTriggerComponent = () => {
 
     // Clean up ScrollTriggers on component unmount
     return () => {
+
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
     };
   }, []);
 

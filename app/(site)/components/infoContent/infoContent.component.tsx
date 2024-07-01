@@ -66,6 +66,7 @@ export default function InfoContent({ info }: HeaderProps) {
               alt={infoPage.aboutVisual.attribution}
               width={500}
               height={500}
+              loading="lazy"
             />
           </figure>
         </section>
