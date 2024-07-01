@@ -36,8 +36,10 @@ export default async function Home() {
 
   return (
     <main>
+     
       <Header set={settings} projects={projects}/>
       <ScrollTriggerComponent/>
+
       <ProjectsAfterToday projects={projects}/>
       <Landing settings={settings}/>
       <ProjectsBeforeToday projects={projects}/>

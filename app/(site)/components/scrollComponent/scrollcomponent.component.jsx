@@ -7,10 +7,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ScrollTriggerComponent = () => {
   useEffect(() => {
-    const home = document.getElementById('home');
-    if (home) {
-      home.scrollIntoView({ behavior: 'smooth' });
-    } 
+    const screenWidth = window.innerWidth;
+    const scrollOffset = screenWidth > 700 ? 1.3 : 1.7;
+    window.scrollTo(0, scrollOffset * window.innerHeight);
     const sections = gsap.utils.toArray(".section");
 
     const switchColor = (color) => {
@@ -82,8 +81,6 @@ const ScrollTriggerComponent = () => {
         }
       });
 
-      
-
         gsap.to({}, {
       scrollTrigger: {
         trigger: document.body,
@@ -103,9 +100,7 @@ const ScrollTriggerComponent = () => {
 
     // Clean up ScrollTriggers on component unmount
     return () => {
-
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
     };
   }, []);
 
