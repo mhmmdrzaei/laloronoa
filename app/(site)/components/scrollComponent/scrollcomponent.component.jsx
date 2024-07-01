@@ -82,9 +82,9 @@ const ScrollTriggerComponent = () => {
           home.scrollIntoView({ behavior: 'smooth' });
         } 
 
-        const screenWidth = window.innerWidth;
-    const scrollOffset = screenWidth > 700 ? 1.3 : 1.7;
-    window.scrollTo(0, scrollOffset * window.innerHeight);
+    //     const screenWidth = window.innerWidth;
+    // const scrollOffset = screenWidth > 700 ? 1.3 : 1.7;
+    // window.scrollTo(0, scrollOffset * window.innerHeight);
       
 
         gsap.to({}, {
