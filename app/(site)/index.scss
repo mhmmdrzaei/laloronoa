@@ -109,7 +109,7 @@ header {
       margin: 0;
       padding: 0;
       list-style: none;
-      height: calc(100vh - 90px);
+      height: calc(100dvh - 90px);
       width: 100px;
       position: fixed;
       background: white;
@@ -520,6 +520,7 @@ header {
   }
   .layout2 {
     background: url(./sources/about/layer2.svg);
+    height: 100vh
   }
   .aboutPage {
     @extend .flex;
@@ -527,6 +528,7 @@ header {
     align-items: center;
     width: 100%;
     height: 100vh;
+
 
     .aboutPageText {
       width: 40%;
@@ -732,18 +734,25 @@ header {
       }
     }
   }
-  .about .aboutPage {
-    .aboutPageText {
-      width: 100%;
-      position: relative;
-      z-index: 1;
+  .about {
+    .container {
+      padding: 5vh 5%;
     }
-    .aboutImg {
-      width: 70%;
-      margin: 0 auto;
-      position: relative;
-      top: -5vh;
-      z-index: 0;
+    .layout1 {
+      // height: 130vh;
+    }.aboutPage {
+      .aboutPageText {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+      .aboutImg {
+        width: 70%;
+        margin: 0 auto;
+        position: relative;
+        top: -5vh;
+        z-index: 0;
+      }
     }
   }
 }

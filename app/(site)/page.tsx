@@ -37,15 +37,10 @@ export default async function Home() {
     <main>
       <Header set={settings} projects={projects}/>
       <ScrollTriggerComponent/>
-      <section className="landing">
       <ProjectsAfterToday projects={projects}/>
 
       <Landing settings={settings}/>
-
-      
-
       <ProjectsBeforeToday projects={projects}/>
-      </section>
       
     </main>
   );

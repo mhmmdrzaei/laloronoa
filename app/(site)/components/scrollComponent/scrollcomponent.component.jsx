@@ -77,7 +77,9 @@ const ScrollTriggerComponent = () => {
           scrub: true // Smooth scrubbing
         }
       });
-      window.scrollTo(0, 1.3 * window.innerHeight); 
+      const home = document.getElementById('home');
+      home.scrollIntoView({ behavior: "smooth" });
+      // window.scrollTo(home); 
 
         gsap.to({}, {
       scrollTrigger: {
