@@ -1,20 +1,17 @@
-import { v4 as uuidv4 } from 'uuid';
-import Image from 'next/image';
-import React from 'react';
+import { v4 as uuidv4 } from "uuid";
+import Image from "next/image";
+import React from "react";
 
-export const dynamic = 'force-dynamic'
-
-
+export const dynamic = "force-dynamic";
 
 export default function ProjectImages({ images }) {
   return (
     <>
       {images.map((items) => {
-
         switch (items._type) {
-          case 'project_video':
+          case "project_video":
             return (
-              <div className="projectVideo"  key={uuidv4()}>
+              <div className="projectVideo" key={uuidv4()}>
                 <div className="projectVideo">
                   <video autoPlay loop muted playsInline>
                     <source src={items.url} type="video/mp4" />
@@ -24,26 +21,33 @@ export default function ProjectImages({ images }) {
               </div>
             );
 
-          case 'projectImage':
+          case "projectImage":
             return (
-                <figure className={`${items.classImg} image`}  key={uuidv4()}>
-                  <Image
-                    src={items.url}
-                    width={1200}
-                    height={1200}
-                    alt={items.attribution ? items.attribution : 'A Project by Sofi Gudiño'}
-                    loading="lazy"
-                    quality={60}
-                  />
-                </figure>
+              <figure className={`${items.classImg} image`} key={uuidv4()}>
+                <Image
+                  src={items.url}
+                  width={1200}
+                  height={1200}
+                  alt={
+                    items.attribution
+                      ? items.attribution
+                      : "A Project by Sofi Gudiño"
+                  }
+                  loading="lazy"
+                  quality={60}
+                />
+              </figure>
             );
 
-          case 'embedVid':
+          case "embedVid":
             const markup = { __html: `${items.text}` };
             return (
               <div className={`${items.classImg} projectVideo`} key={uuidv4()}>
                 <div className="videotextContainer">
-                  <div className='embedVideoContent' dangerouslySetInnerHTML={markup} />
+                  <div
+                    className="embedVideoContent"
+                    dangerouslySetInnerHTML={markup}
+                  />
                 </div>
               </div>
             );

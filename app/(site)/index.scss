@@ -15,7 +15,7 @@ body {
 // main {
 //   overflow: hidden;
 // }
-body::after  {
+body::after {
   content: " ";
   height: calc(100vh - 70px);
   top: 20px;
@@ -26,10 +26,12 @@ body::after  {
 }
 body.white-text {
   header {
-    h1 a, button {
+    h1 a,
+    button {
       color: #ffffff;
     }
-    .paused, .play {
+    .paused,
+    .play {
       filter: invert(1);
     }
   }
@@ -150,7 +152,6 @@ header {
   // }
 }
 
-
 //Audio
 .audiobutton {
   background: transparent;
@@ -181,7 +182,6 @@ header {
     width: 26px;
     height: 14px;
     cursor: pointer;
-    
   }
   .afterLink {
     content: " ";
@@ -192,8 +192,6 @@ header {
     transform: rotate(180deg);
     cursor: pointer;
   }
-
-
 }
 .singleProject,
 .about,
@@ -323,7 +321,6 @@ header {
     background: url(./sources/2066/layer2.svg);
     left: -20%;
     top: -80%;
-
   }
   .projectContent {
     position: relative;
@@ -356,7 +353,6 @@ header {
   }
 }
 .s2022-1 {
-
   .layout1 {
     background: url(./sources/2022-1/layer1.png);
     position: fixed;
@@ -420,80 +416,66 @@ header {
   }
   .layout2 {
     background: url(./sources/2022-2/layer2.svg);
-    opacity: .8;
+    opacity: 0.8;
   }
   .projectContent {
     min-height: 150vh;
     .projectText {
-
-    /* position: absolute; */
-    top: 10%;
-    width: 60%;
-    left: 50%;
-    margin: 20vh auto;
-    padding: 20px;
-    border: 1px solid black;
-    background: white;
-
+      /* position: absolute; */
+      top: 10%;
+      width: 60%;
+      left: 50%;
+      margin: 20vh auto;
+      padding: 20px;
+      border: 1px solid black;
+      background: white;
     }
     .projectVideo {
-        margin-top: 5vh;
-        max-width: 900px;
-        margin: 0 auto;
+      margin-top: 5vh;
+      max-width: 900px;
+      margin: 0 auto;
     }
-    
   }
-
 }
 .s1519 {
-    .projectContent {
-    
-
+  .projectContent {
     min-height: 150vh;
     position: relative;
-        .projectText {
-
-    width: 45%;
-    background: #0500FF;
-    color: white;
-    padding: 20px;
-    position: sticky;
-    left: 21%;
-    z-index: 4;
-    top: 70px;
-    border: 1px solid white;
-
-        }
-        .first-image {
-
-    position: absolute;
-    width: 25%;
-    top: -100px;
-    max-width: 240px;
-
-        }
-        .second-image {
-
-    position: absolute;
-    width: 30%;
-    max-width: 420px;
-    left: 63%;
-    top: 45%;
-          img {
-            max-height: 80vh;
-            width: auto;
-          }
-
-        }
-        .third-image {
-
-    position: absolute;
-    top: 0;
-    width: 25%;
-    right: 0;
-
-        }
+    .projectText {
+      width: 45%;
+      background: #0500ff;
+      color: white;
+      padding: 20px;
+      position: sticky;
+      left: 21%;
+      z-index: 4;
+      top: 70px;
+      border: 1px solid white;
     }
+    .first-image {
+      position: absolute;
+      width: 25%;
+      top: -100px;
+      max-width: 240px;
+    }
+    .second-image {
+      position: absolute;
+      width: 30%;
+      max-width: 420px;
+      left: 63%;
+      top: 45%;
+      img {
+        max-height: 80vh;
+        width: auto;
+      }
+    }
+    .third-image {
+      position: absolute;
+      top: 0;
+      width: 25%;
+      right: 0;
+    }
+  }
   .layout1 {
     background: url(./sources/1519/layer1.svg);
     width: 60%;
@@ -521,10 +503,12 @@ header {
     z-index: -1;
   }
   header {
-    h1 a, button {
+    h1 a,
+    button {
       color: #ffffff;
     }
-    .paused, .play {
+    .paused,
+    .play {
       filter: invert(1);
     }
   }
@@ -584,29 +568,30 @@ header {
   }
 }
 @media (max-width: 700px) {
-  h1,header .timeline button  {
+  h1,
+  header .timeline button {
     @include fontSize(10);
   }
 
- header {
-  .paused,  .play {
-    scale: .6;
+  header {
+    .paused,
+    .play {
+      scale: 0.6;
+    }
   }
-
- }
-.audiobutton {
-  bottom:12px;
-  right: 6px;
-}
+  .audiobutton {
+    bottom: 12px;
+    right: 6px;
+  }
   .singleProject,
-.about,
-.landingPage {
-  .container {
-    padding: 7vh 5% 20vh;
+  .about,
+  .landingPage {
+    .container {
+      padding: 7vh 5% 20vh;
+    }
   }
-}
   .s2666 {
-    .projectContent{
+    .projectContent {
       display: flex;
       flex-wrap: wrap;
       .projectText {
@@ -628,31 +613,29 @@ header {
     }
   }
   .landingPage {
-   .landingPageInner{
-    display: flex;
-    flex-wrap: wrap;
-    .landingText {
-      width: 100%;
-      position: initial;
-      margin: 30px 0;
-      order: 3;
-     }
-     .landingImg {
-      width: 100%;
-      position: initial;
-      order: 1;
-     }
-     .navigation {
-      position: inherit;
-      order: 2;
-      margin-top: 30px;
-     }
-
-   }
-   
+    .landingPageInner {
+      display: flex;
+      flex-wrap: wrap;
+      .landingText {
+        width: 100%;
+        position: initial;
+        margin: 30px 0;
+        order: 3;
+      }
+      .landingImg {
+        width: 100%;
+        position: initial;
+        order: 1;
+      }
+      .navigation {
+        position: inherit;
+        order: 2;
+        margin-top: 30px;
+      }
+    }
   }
   .s2022-1 {
-    .projectContent{
+    .projectContent {
       display: flex;
       flex-wrap: wrap;
       height: initial;
@@ -698,7 +681,7 @@ header {
     }
   }
   .s1519 {
-    .projectContent{
+    .projectContent {
       display: flex;
       flex-wrap: wrap;
       height: initial;
@@ -729,7 +712,6 @@ header {
         top: -11vh;
         left: 5%;
       }
-
     }
   }
   .about .aboutPage {

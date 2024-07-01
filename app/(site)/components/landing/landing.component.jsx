@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import Background from "../background/background.component";
-import Nav from '../nav/nav.component'
+import Nav from "../nav/nav.component";
 const Landing = ({ settings }) => {
   const today = new Date();
   const formattedDate = today.toLocaleDateString("en-US", {
