@@ -7,14 +7,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ScrollTriggerComponent = () => {
   useEffect(() => {
-    const screenWidth = window.innerWidth;
-    const scrollOffset = screenWidth > 700 ? 1.3 : 1.7;
-    window.scrollTo(0, scrollOffset * window.innerHeight);
+    // const screenWidth = window.innerWidth;
+    // const scrollOffset = screenWidth > 700 ? 1.3 : 1.7;
+    // window.scrollTo(0, scrollOffset * window.innerHeight);
     const sections = gsap.utils.toArray(".section");
 
     const switchColor = (color) => {
       gsap.to(document.body, {
-        duration: 1,
+        duration: .5,
         ease: "power1.inOut",
         backgroundColor: color
       });
@@ -24,11 +24,11 @@ const ScrollTriggerComponent = () => {
       const color = section.dataset.bgcolor;
       const previousColor = sections[i - 1]
         ? sections[i - 1].dataset.bgcolor
-        : "#000000";
+        : "#fffff";
       ScrollTrigger.create({
         trigger: section,
-        start: "top center",
-        end: "bottom center",
+        start: "-30px top",
+        end: "bottom bottom",
         onEnter: () => switchColor(color),
         onEnterBack: () => i === sections.length - 1 && switchColor(color),
         onLeave: () => i === sections.length - 1 && switchColor("#000000"),
@@ -83,13 +83,14 @@ const ScrollTriggerComponent = () => {
 
         gsap.to({}, {
       scrollTrigger: {
-        trigger: document.body,
-        start: "700vh 0px",
+        trigger: document.querySelector(".s2666"),
+        start: "-30px 0px",
         end: "bottom top",
-        onEnter: () => {document.body.classList.remove('white-text')},
-      onLeave: () => {document.body.classList.add('white-text')},
-        onEnterBack: () => {document.body.classList.remove('white-text')},
-        onLeaveBack: () => {document.body.classList.add('white-text')},
+        onEnter: () => {document.body.classList.add('white-text')},
+      onLeave: () => {document.body.classList.remove('white-text')},
+        onEnterBack: () => {document.body.classList.add('white-text')},
+        onLeaveBack: () => {document.body.classList.remove('white-text')},
+        // markers: true
       }
     });
 

@@ -40,8 +40,9 @@ export default async function Home() {
       <Header set={settings} projects={projects}/>
       <ScrollTriggerComponent/>
 
-      <ProjectsAfterToday projects={projects}/>
+
       <Landing settings={settings}/>
+      <ProjectsAfterToday projects={projects}/>
       <ProjectsBeforeToday projects={projects}/>
       
     </main>
