@@ -5,7 +5,7 @@ import ProjectsAfterToday from './components/projectsAfterToday/projectsAfterTod
 import ProjectsBeforeToday from './components/projectsBeforeToday/projectsBeforeToday.component'
 import Landing from './components/landing/landing.component'
 import ScrollTriggerComponent from './components/scrollComponent/scrollcomponent.component'
-import HomeComp from './components/homeComp/homeComp.component'
+// import HomeComp from './components/homeComp/homeComp.component'
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getsettings();
@@ -43,7 +43,8 @@ export default async function Home() {
 
       <Landing settings={settings}/>
       <ProjectsAfterToday projects={projects}/>
-      <ProjectsBeforeToday projects={projects}/>
+      <ProjectsBeforeToday projects={projects}/> 
+      {/* <HomeComp projects={projects} settings={settings}/> */}
       
     </main>
   );

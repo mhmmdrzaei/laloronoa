@@ -27,8 +27,8 @@ const ScrollTriggerComponent = () => {
         : "#fffff";
       ScrollTrigger.create({
         trigger: section,
-        start: "-1vh top",
-        end: "bottom bottom",
+        start: "-1% top",
+        end: "bottom 10px",
         onEnter: () => switchColor(color),
         onEnterBack: () => i === sections.length - 1 && switchColor(color),
         onLeave: () => i === sections.length - 1 && switchColor("#000000"),
@@ -84,8 +84,8 @@ const ScrollTriggerComponent = () => {
         gsap.to({}, {
       scrollTrigger: {
         trigger: document.querySelector(".s2666"),
-        start: "-1vh 0px",
-        end: "bottom top",
+        start: "-2% 0px",
+        end: "bottom bottom",
         onEnter: () => {document.body.classList.add('white-text')},
       onLeave: () => {document.body.classList.remove('white-text')},
         onEnterBack: () => {document.body.classList.add('white-text')},

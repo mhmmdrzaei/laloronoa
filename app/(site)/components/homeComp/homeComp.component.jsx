@@ -1,38 +1,39 @@
-"use client";
+// 'use client';
 
-import { useEffect, useState } from 'react';
-import ProjectsAfterToday from '../projectsAfterToday/projectsAfterToday.component';
-import ProjectsBeforeToday from '../projectsBeforeToday/projectsBeforeToday.component';
-import Landing from '../landing/landing.component';
+// import { useEffect, useState } from 'react';
+// import ProjectsAfterToday from '../projectsAfterToday/projectsAfterToday.component'
+// import Landing from '../landing/landing.component';
 
-const HomeComp = ({ settings, projects }) => {
-  const [currentComponent, setCurrentComponent] = useState<'landing' | 'projectsAfterToday' | 'projectsBeforeToday'>('landing');
 
-  useEffect(() => {
-    const handleScroll = (event) => {
-      if (currentComponent === 'landing') {
-        if (event.deltaY < 0) {
-          setCurrentComponent('projectsAfterToday');
-        } else if (event.deltaY > 0) {
-          setCurrentComponent('projectsBeforeToday');
-        }
-      }
-    };
+// const HomeComponent = ({ settings, projects }) => {
+//   const [showProjectsAfterToday, setShowProjectsAfterToday] = useState(false);
 
-    window.addEventListener('wheel', handleScroll);
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const scrollPosition = window.scrollY;
+//       if (scrollPosition <= 0) {
+//         setShowProjectsAfterToday(true);
+//       }
+//     };
 
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-    };
-  }, [currentComponent]);
+//     window.addEventListener('scroll', handleScroll);
 
-  return (
-    <>
-      {currentComponent === 'landing' && <Landing settings={settings} />}
-      {currentComponent === 'projectsAfterToday' && <ProjectsAfterToday projects={projects} />}
-      {currentComponent === 'projectsBeforeToday' && <ProjectsBeforeToday projects={projects} />}
-    </>
-  );
-}
+//     return () => {
+//       window.removeEventListener('scroll', handleScroll);
+//     };
+//   }, []);
 
-export default HomeComp;
+//   return (
+//       <>
+//       {showProjectsAfterToday && <ProjectsAfterToday projects={projects} />}
+//       <Landing settings={settings} />
+      
+      
+//       </>
+
+
+
+//   );
+// };
+
+// export default HomeComponent;

@@ -21,7 +21,7 @@ export default function Nav() {
     }, 100);
   };
   return (
-    <div className="navigation">
+    <div className="navigation navAnime">
       <div onClick={scrollAfter} className="afterLink"></div>
       <p>OPEN TIMELINE TO SCROLL THROUGH THE PROJECT</p>
       <div onClick={scrollBefore} className="beforeLink"></div>

@@ -13,6 +13,7 @@ const TimeLine = ({ projects }) => {
       console.log("Opening the menu");
     }
     setIsOpen(!isOpen);
+    document.querySelector('.navigation').classList.toggle("navAnime");
   };
   const router = useRouter();
 

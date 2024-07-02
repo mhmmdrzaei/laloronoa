@@ -290,10 +290,12 @@ header {
         display: flex;
         justify-content: center;
       }
-      animation: fadeout 10s ease-in-out;
-      animation: horizontal-shaking 1s infinite ease-in-out;
     }
   }
+}
+.navAnime {
+  animation: fadeout 10s ease-in-out;
+  animation: horizontal-shaking 1s infinite ease-in-out;
 }
 @keyframes horizontal-shaking {
   0% {
