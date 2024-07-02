@@ -506,7 +506,7 @@ header {
   .container::after {
     background: #ffffff;
     content: " ";
-    height: calc(100vh - 70px);
+    height: calc(100dvh - 70px);
     top: 20px;
     left: 50%;
     width: 2px;
@@ -716,6 +716,28 @@ header {
       }
     }
   }
+  .about {
+    .container {
+      padding: 5vh 5%;
+    }
+    .layout1 {
+      height: 110vh;
+    }
+    .aboutPage {
+      .aboutPageText {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+      .aboutImg {
+        width: 70%;
+        margin: 0 auto;
+        position: relative;
+        top: -5vh;
+        z-index: 0;
+      }
+    }
+  }
   .s1519 {
     .projectContent {
       display: flex;
@@ -750,25 +772,5 @@ header {
       }
     }
   }
-  .about {
-    .container {
-      padding: 5vh 5%;
-    }
-    .layout1 {
-      // height: 130vh;
-    }.aboutPage {
-      .aboutPageText {
-        width: 100%;
-        position: relative;
-        z-index: 1;
-      }
-      .aboutImg {
-        width: 70%;
-        margin: 0 auto;
-        position: relative;
-        top: -5vh;
-        z-index: 0;
-      }
-    }
-  }
+
 }
